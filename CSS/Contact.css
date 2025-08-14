@@ -80,7 +80,6 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 8px;
 }
 
 .navItems{
@@ -139,41 +138,6 @@ header{
     color: darkgoldenrod;
 }
 
-/* MAIN PAGE STYLING*/
-main{
-    width: 100%;
-}
-
-/* SECTIONS IN MAIN PAGE STYLING*/
-#firstSection{
-    margin-top: 150px;
-    padding-top: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.borne1{
-    color: darkgoldenrod;
-}
-
-.introText{
-    width: 60%;
-    font-size: 1.2em;
-    margin-left: 50px;
-}
-
-.mainIntro{
-    font-size: 2em;
-}
-
-.p1{
-    font-size: 1.2em;
-    color: #4e4c4c;
-}
-
 .btnGetStarted{
     cursor: pointer;
     background-color: darkgoldenrod;
@@ -213,249 +177,186 @@ main{
     border: none;
 }
 
-.logo{
-  width: 400px;
-  height: 350px;
-  border-radius: 20px;
-  margin-right: 60px;
+/* MAIN STYLING*/
+main{
+    margin-top: 150px;
+    width: 100%;
+}
+.backGround{
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.sectionPart{
+.overLay{
+    position: absolute;
+    top: 400px;
+    color: #fff;
+    left: 60px;
+    font-size: 3em;
+}
+
+.overLay1{
+    position: absolute;
+    top: 460px;
+    color: #fff;
+     left: 60px;
+}
+
+.button{
+    position: absolute;
+    top: 500px;
+    left: 170px;
     display: flex;
-    text-align: end;
-    flex-direction: column;
+    align-items: center;
 }
 
-.rule{
-    width: 30%;
-    margin: 0 auto;
-    height: 4px;
+.btnHome{
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 30px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.fa-arrow-right{
+    color: #fff;
+    font-size: 1.9em;
+    margin-right: 20px;
+}
+
+.btnContact{
+    cursor: pointer;
     background-color: darkgoldenrod;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: 1px solid darkgoldenrod;
+    transition: all 0.5s ease-in-out;
+}
+
+.btnContact:hover{
+    background-color: transparent;
+    color: #fff;
 }
 
 #secondSection{
-    margin-top: 8px;
-    margin-top: 30px;
+    width: 100%;  
 }
 
-.main2{
-    text-align: center;
-    margin-top: 30px; 
-}
-
-.basics{
-    margin-top: 30px;
+.contactDetails{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    align-items: flex-start;
+    padding: 40px;
+}
+.messageContact{
+    width: 60%;
+    margin-right: 50PX;
 }
 
-.text1{
-    width: 50%;
-    text-align: left;
-    font-size: 1.2em;
-    padding: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border-radius: 8px;
-    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.getToKnowImg{
-    width: 50%;
-    height: 290px;
-    border-radius: 10px;
-    margin-right: 50px;
-    margin-left: 10px;
-    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease-in-out;
-}
-
-.getToKnowImg:hover{
-    transform: scaleY(1.07);
-}
-
-#thirdSection{
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    min-height: 40%;
-}
-
-.serve{
-    font-size: 2em;
-}
-
-.ser{
-    font-size: 1.3em;
-    color: #928b8b;
-}
-
-.services{
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   justify-items: center;
-   color: #fff;
-}
-
-.service{
-    cursor: pointer;
-    margin-top: 20px;
-    width: 85%;
-    height: 250px;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 3px 2px 8px 9px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    transition: all 0.5s ease-in-out;
-
-        
-    animation: appear both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-
-@keyframes appear{
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-.service:hover{
-    transform: scale(1.08);
-}
-
-.icons{
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 2em;
-}
-
-.shortNote{
-    display: flex;
-    justify-content: space-between;
-    width: 93%;
-    margin-left: 70px;
-}
-
-.text{
+.messageContact h1{
     font-size: 2.3em;
 }
 
-.seeServices{
-    padding: 10px 20px;
-    align-self: flex-end;
-    background-color: darkgoldenrod;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1.1em;
-    margin-right: 50px;
-    transition: all 0.5s ease-in-out;
+.messageContact h1, .messageContact p{
+    margin-left: 30px;
 }
 
-.seeServices:hover{
-    background-color: #fff;
-    border-radius: 10px;
-    color: darkgoldenrod;
-    border: 1px solid darkgoldenrod;
-}
-
-#fourthSection{
+.form1{
+    padding: 30px;
     width: 100%;
-    margin: 30px 0;
 }
 
-.whyChooseUs{
-    display: flex;
-    justify-content: center;
-    margin: 20px;   
-}
-
-.reasons{
-    width: 50%;
-    padding: 40px;
-}
-
-.alignWell{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.qualities .fa-check{
-    color: green;
-    font-size: 1.3em;
-}
-.qualities span{
-    font-size: 1.5em;
-}
-
-.whyChooseImgs{
-    position: relative;
-}
-
-#sixthSection{
-    width: 100%;
-    margin: 30px 0;
-    text-align: center;
-}
-
-.pictures{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-       animation: fadeIn both;
-    animation-timeline: view(50% 20%);
-    animation-range: entry;
-}
-.picture{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 20px;
-    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease-in-out;
-}
-
-.picture:hover{
-    transform: scale(1.1);
-}
-
-.btnGetStarted1{
-    cursor: pointer;
-    background-color: darkgoldenrod;
-    border-radius: 10px;
-    color: #fff;
+.form1 textarea{
+    display: block;
+    width: 90%;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 4px;
     border: none;
-    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
     font-size: 18px;
-    margin-top: 20px;
+}
+
+.form1 input[type='text'], .form1 input[type='email']{
+    height: 40px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.form1 input[type='text'], .form1 input[type='email']:focus{
+    outline: none;
+}
+
+.form1 textarea:focus{
+    outline: none;
+}
+
+.form1 input[type='text'], .form1 input[type='email']::placeholder{
+    padding-left: 9px;
+    font-size: 18px;
+}
+
+.form1 textarea::placeholder{
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.form1 .btnSendMessage{
+    width: 90%;
+    height: 50px;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     transition: all 0.5s ease-in-out;
 }
 
-.btnGetStarted1:hover{
-    background-color: #fff;
-    border-radius: 10px;
-    color: darkgoldenrod;
-    border: 1px solid darkgoldenrod;
+.form1 .btnSendMessage:hover{
+    background-color: rgb(123, 89, 3);
+}
+
+.form1 .btnSendMessage .fa-arrow-right{
+    color: #fff;
+    font-size: 1.9em;
+    margin-left: 20px;
+}
+
+
+.otherInfo{
+    width: 30%;
+}
+
+.otherInfo h1{
+    font-size: 2.3em;
+}
+
+.otherInfo .p1{
+    margin-bottom: 30px;
+}
+
+.details{
+    margin-bottom: 20px;
+}
+
+.callNumber, .emailInfo{
+    margin-bottom: 15px;
 }
 
 /* FOOTER STYLING */
 #footer{
-    bottom: 0;
     background-color: #000;
     padding: 2em;
     width: 100%;
@@ -510,11 +411,11 @@ main{
     padding: 40px;
 }
 
-form{
+.form11{
     width: 100%;
 }
 
-form input[type='text']{
+.form11 input[type='text']{
     height: 35px;
     width: 60%;
     margin-bottom: 10px;
@@ -523,7 +424,7 @@ form input[type='text']{
     padding: 10px;
 }
 
-form input[type='text']::placeholder{
+.form11 input[type='text']::placeholder{
     padding-left: 10px;
 }
 
