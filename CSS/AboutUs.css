@@ -177,7 +177,6 @@ header{
     border: none;
 }
 
-/* MAIN STYLING*/
 main{
     margin-top: 150px;
     width: 100%;
@@ -244,28 +243,119 @@ main{
     color: #fff;
 }
 
-#secondSection{
-    width: 100%;  
+/* MAIN STYLING */
+main{
+    width: 100%;
 }
 
-.contactDetails{
+.mainSubject{
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+}
+
+.safety{
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.securityPicture{
+    width: 50%;
+}
+
+.imageSecurity{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 30px;
+    position: relative;
+}
+
+.sP1{
+    position: absolute;
+    top: 0;
+    right: 120px;
+    background-color: #fff;
+    font-weight: bold;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+}
+
+.sP1 span{
+    font-size: 3em;
+    color: rgba(145, 109, 17, 0.434);
+}
+
+.sP1 .year1{
+    font-size: 1.2em;
+}
+
+.sP2{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background-color: rgb(230, 180, 54);
+    color: #fff;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-weight: bold;
+    font-size: 1.9em;
+}
+
+.newInfo{
+    padding-top: 60px;
+}
+
+.fonts{
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    padding: 2px;
+    background-color: darkgoldenrod;
+}
+
+#thirdSection{
+    width: 100%;
+}
+
+.advantagesChoosing{
+    width: 100%;
     padding: 40px;
-}
-.messageContact{
-    width: 60%;
-    margin-right: 50PX;
-}
-
-.messageContact h1{
-    font-size: 2.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.messageContact h1, .messageContact p{
-    margin-left: 30px;
+.advan{
+    font-size: 3em;
+    margin-bottom: 15px;
 }
 
+.box{
+    width: 90%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #000;
+    color: darkgoldenrod;
+    box-shadow: 1px 1px 3px 5px rgba(65, 63, 63, 0.522);
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.box2 h2{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* FOOTER STYLING */
 .form1{
     padding: 30px;
     width: 100%;
@@ -334,7 +424,6 @@ main{
     font-size: 1.9em;
     margin-left: 20px;
 }
-
 
 .otherInfo{
     width: 30%;
