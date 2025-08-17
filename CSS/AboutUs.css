@@ -136,6 +136,7 @@ header{
     font-size: 30px;
     cursor: pointer;
     color: darkgoldenrod;
+    padding-right: 50px;
 }
 
 .btnGetStarted{
@@ -336,18 +337,17 @@ main{
 }
 
 .box{
-    width: 90%;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    padding: 25px;
-    background-color: #000;
-    color: darkgoldenrod;
-    box-shadow: 1px 1px 3px 5px rgba(65, 63, 63, 0.522);
-    transition: all 0.5s ease-in-out;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+
 }
 
-.box:hover{
-    transform: scale(1.1);
+.box2{
+     background-color: #000;
+   color: darkgoldenrod;
+   border-radius: 10px;
+   padding: 20px;
 }
 
 .box2 h2{
@@ -355,94 +355,33 @@ main{
     font-weight: bold;
 }
 
-/* FOOTER STYLING */
-.form1{
-    padding: 30px;
+#sixthSection{
     width: 100%;
+    margin: 30px 0;
+    text-align: center;
 }
 
-.form1 textarea{
-    display: block;
-    width: 90%;
-    height: 100px;
-    border-radius: 5px;
-    margin-bottom: 4px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-left: 10px;
-    font-size: 18px;
+.pictures{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 25px;
 }
-
-.form1 input[type='text'], .form1 input[type='email']{
-    height: 40px;
-    width: 90%;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-.form1 input[type='text'], .form1 input[type='email']:focus{
-    outline: none;
-}
-
-.form1 textarea:focus{
-    outline: none;
-}
-
-.form1 input[type='text'], .form1 input[type='email']::placeholder{
-    padding-left: 9px;
-    font-size: 18px;
-}
-
-.form1 textarea::placeholder{
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-.form1 .btnSendMessage{
-    width: 90%;
-    height: 50px;
-    background-color: darkgoldenrod;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    transition: all 0.5s ease-in-out;
-}
-
-.form1 .btnSendMessage:hover{
-    background-color: rgb(123, 89, 3);
-}
-
-.form1 .btnSendMessage .fa-arrow-right{
-    color: #fff;
-    font-size: 1.9em;
+.picture{
+    margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in-out;
+    padding: 10px;
 }
 
-.otherInfo{
-    width: 30%;
+.picture img{
+    border-radius: 20px;
 }
 
-.otherInfo h1{
-    font-size: 2.3em;
-}
-
-.otherInfo .p1{
-    margin-bottom: 30px;
-}
-
-.details{
-    margin-bottom: 20px;
-}
-
-.callNumber, .emailInfo{
-    margin-bottom: 15px;
+.picture:hover{
+    transform: scale(1.1);
 }
 
 /* FOOTER STYLING */
@@ -501,28 +440,12 @@ main{
     padding: 40px;
 }
 
-.form11{
-    width: 100%;
-}
-
-.form11 input[type='text']{
-    height: 35px;
-    width: 60%;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-}
-
-.form11 input[type='text']::placeholder{
-    padding-left: 10px;
-}
-
 .moreInfo2{
     display: flex;
     width: 100%;
     gap: 60px;
     color: #adadad;
+    margin-top: 20px;
 }
 .foot{
     color:#fff;
@@ -536,4 +459,24 @@ main{
     color: #adadad;
     font-weight: bold;
     text-decoration: none;
+}
+
+.otherInfo{
+    width: 30%;
+}
+
+.otherInfo h1{
+    font-size: 2.3em;
+}
+
+.otherInfo .p1{
+    margin-bottom: 30px;
+}
+
+.details{
+    margin-bottom: 20px;
+}
+
+.callNumber, .emailInfo{
+    margin-bottom: 15px;
 }

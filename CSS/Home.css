@@ -137,6 +137,7 @@ header{
     font-size: 30px;
     cursor: pointer;
     color: darkgoldenrod;
+    padding-right: 50px;
 }
 
 /* MAIN PAGE STYLING*/
@@ -305,7 +306,7 @@ main{
 .service{
     cursor: pointer;
     margin-top: 20px;
-    width: 85%;
+    width: 90%;
     height: 250px;
     background-color: #fff;
     color: #000;
@@ -510,28 +511,12 @@ main{
     padding: 40px;
 }
 
-form{
-    width: 100%;
-}
-
-form input[type='text']{
-    height: 35px;
-    width: 60%;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-}
-
-form input[type='text']::placeholder{
-    padding-left: 10px;
-}
-
 .moreInfo2{
     display: flex;
     width: 100%;
     gap: 60px;
     color: #adadad;
+    margin-top: 20px;
 }
 .foot{
     color:#fff;

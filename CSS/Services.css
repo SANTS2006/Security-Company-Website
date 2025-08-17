@@ -152,37 +152,11 @@ header{
     transition: all 0.5s ease-in-out;
 }
 
-.btnGetServices{
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 10px;
-    color: darkgoldenrod;
-    border: 1px solid darkgoldenrod;
-    padding: 10px 20px;
-    font-size: 14px;
-    margin-top: 20px;
-    transition: all 0.5s ease-in-out;
-}
-
-.btnGetStarted:hover{
-    background-color: #fff;
-    border-radius: 10px;
-    color: darkgoldenrod;
-    border: 1px solid darkgoldenrod;
-}
-
-.btnGetServices:hover{
-    background-color: darkgoldenrod;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
-}
-
-/* MAIN STYLING*/
 main{
     margin-top: 150px;
     width: 100%;
 }
+
 .backGround{
     position: relative;
     width: 100%;
@@ -203,118 +177,195 @@ main{
     top: 460px;
     color: #fff;
      left: 60px;
+     font-size: 1.8em;
 }
 
 #secondSection{
-    width: 100%;  
-}
-
-.contactDetails{
-    display: flex;
-    align-items: flex-start;
-    padding: 40px;
-}
-.messageContact{
-    width: 60%;
-    margin-right: 50PX;
-}
-
-.messageContact h1{
-    font-size: 2.3em;
-}
-
-.messageContact h1, .messageContact p{
-    margin-left: 30px;
-}
-
-.form1{
-    padding: 30px;
     width: 100%;
 }
 
-.form1 textarea{
-    display: block;
-    width: 90%;
-    height: 100px;
-    border-radius: 5px;
-    margin-bottom: 4px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-.form1 input[type='text'], .form1 input[type='email']{
-    height: 40px;
-    width: 90%;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-.form1 input[type='text'], .form1 input[type='email']:focus{
-    outline: none;
-}
-
-.form1 textarea:focus{
-    outline: none;
-}
-
-.form1 input[type='text'], .form1 input[type='email']::placeholder{
-    padding-left: 9px;
-    font-size: 18px;
-}
-
-.form1 textarea::placeholder{
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-.form1 .btnSendMessage{
-    width: 90%;
-    height: 50px;
-    background-color: darkgoldenrod;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    align-items: center;
+.whatWeOffer{
     display: flex;
     justify-content: center;
+    width: 100%;
+    padding: 30px;
+    margin-left: 50px;
+}
+
+.noteOffer{
+    padding-left: 20px;
+}
+
+.noteOffer h3{
+    color: darkgoldenrod;
+    margin-bottom: 20px;
+    font-style: italic;
+    margin-left: 40px;
+    font-size: 1.8em;
+}
+
+.noteOffer h1{
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.noteOffer p{
+    margin-bottom: 20px;
+    color: #454444;
+}
+
+.btnDiscover{
+    cursor: pointer;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-size: 1em;
+    padding: 8px 15px;
+    border: 1px solid darkgoldenrod;
     transition: all 0.5s ease-in-out;
 }
 
-.form1 .btnSendMessage:hover{
-    background-color: rgb(123, 89, 3);
+.img1{
+    padding-bottom: 10px;
 }
 
-.form1 .btnSendMessage .fa-arrow-right{
+.imageSecurity{
+    width: 55%;
+    border-radius: 20px;
+    box-shadow: 15px 8px 2px 1px darkgoldenrod;
+}
+
+#thirdSection{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 40%;
+}
+
+.serve{
+    font-size: 2em;
+}
+
+.ser{
+    font-size: 1.3em;
+    color: #928b8b;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.services{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: center;
+   color: #fff;
+}
+
+.service{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 90%;
+    height: 250px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 2px 8px 9px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+    background-color: darkgoldenrod;
     color: #fff;
-    font-size: 1.9em;
-    margin-left: 20px;
+
+        
+    animation: appear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
-
-.otherInfo{
-    width: 30%;
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
-.otherInfo h1{
+.service:hover{
+    transform: scale(1.08);
+}
+
+.icons{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.shortNote{
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin-left: 70px;
+}
+
+.text{
     font-size: 2.3em;
 }
 
-.otherInfo .p1{
-    margin-bottom: 30px;
+.seeServices{
+    padding: 10px 20px;
+    align-self: flex-end;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1em;
+    margin-right: 50px;
+    transition: all 0.5s ease-in-out;
 }
 
-.details{
-    margin-bottom: 20px;
+.seeServices:hover{
+    background-color: #fff;
+    border-radius: 10px;
+    color: darkgoldenrod;
+    border: 1px solid darkgoldenrod;
 }
 
-.callNumber, .emailInfo{
+/* WORKING PROGRESS */
+.firstDiv{
+    padding: 30px;
+}
+
+.firstDiv h1{
+    text-align: center;
+    font-size: 2.6em;
     margin-bottom: 15px;
+}
+
+.firstDiv h2, .firstDiv h3{
+    margin-bottom: 10px;
+    font-size: 1.7em;
+}
+
+.mainDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.childDivs{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.childDivs:hover{
+    transform: scale(0.95);
 }
 
 /* FOOTER STYLING */
