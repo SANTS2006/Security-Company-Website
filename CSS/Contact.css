@@ -9,35 +9,54 @@
 
 body{
     font-family: 'Roboto', 'monospaced', 'lucida calligraphy';
+    min-height: 100vh;
+}
+
+.basicContact{
+    position: fixed;
+    width: 100%;
+    background-color: darkgoldenrod;
+    color: #000;
+    min-height: 60px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.callNumber, .emailInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+}
+.call, .email{
+    color: #000;
+}
+
+.same{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* HEADER STYLING*/
 header{
     position: fixed;
+    top: 55px;
     width: 100%;
-    z-index: 100;
     background-color: #fff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 100px;
+    z-index: 1;
 }
 
-/*#navBar{
-    transition: background-color 0.5s ease-out;
-}
-
-.scrolled{
-    background-color: rgb(112, 87, 24);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
-}*/
-
-/* NAVBAR STYLING*/
-.navContainer{
+.headerContent{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
-    color: #000;
+    align-items: center;
+    padding: 24px 30px;
+    position: relative;
 }
 
 .logoName{
@@ -55,39 +74,12 @@ header{
     color: darkgoldenrod;
 }
 
-.basicContact{
-    display: flex;
-    gap: 50px;
-}
-
-.callNumber, .emailInfo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1em;
-}
-.call, .email{
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    align-items: center;
-    padding: 2px;
-    background-color: darkgoldenrod;
-}
-
-.same{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.navItems{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
+.hamburger{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 35px;
+    display: none;
 }
 
 .mainList{
@@ -180,29 +172,23 @@ header{
 
 /* MAIN STYLING*/
 main{
-    margin-top: 150px;
+    margin-top: 90px;
     width: 100%;
-}
-.backGround{
-    position: relative;
-    width: 100%;
-    height:700px; 
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.overLay{
-    position: absolute;
-    top: 400px;
-    color: #fff;
-    left: 60px;
-    font-size: 3em;
+#firstSection{
+    background-image: url('../Images/ContactPageImg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
 }
 
 .overLay1{
     position: absolute;
-    top: 460px;
+    top: 360px;
     color: #fff;
-     left: 60px;
+    left: 60px;
 }
 
 #secondSection{
@@ -392,4 +378,54 @@ main{
     color: #adadad;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media (max-width: 768px){
+    .headerContent, #firstSection, .basics{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }.logoName, #navBar .mainList .lists .listLink{
+        text-align: center;
+    }
+    #firstSection{
+        margin-top: 92px;
+        width: 100%;
+        height: 1000px;
+    }
+
+    .overLay1{
+        position: absolute;
+        top: 360px;
+        color: #fff;
+        left: 60px;
+    }
+
+    .contactDetails{
+        display: block;
+        width: 100%;
+    }
+
+    .messageContact{
+        width: 100%;
+    }
+
+    .otherInfo{
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    .mainFooter{
+        display: block;
+        width: 100%;
+    }
+    .footerOne, .footerTwo{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .moreInfo2{
+        display: block;
+        width: 100%;
+    }
 }

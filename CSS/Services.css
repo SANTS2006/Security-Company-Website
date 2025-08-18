@@ -9,35 +9,54 @@
 
 body{
     font-family: 'Roboto', 'monospaced', 'lucida calligraphy';
+    min-height: 100vh;
+}
+
+.basicContact{
+    position: fixed;
+    width: 100%;
+    background-color: darkgoldenrod;
+    color: #000;
+    min-height: 60px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.callNumber, .emailInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+}
+.call, .email{
+    color: #000;
+}
+
+.same{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* HEADER STYLING*/
 header{
     position: fixed;
+    top: 55px;
     width: 100%;
-    z-index: 100;
     background-color: #fff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 100px;
+    z-index: 1;
 }
 
-/*#navBar{
-    transition: background-color 0.5s ease-out;
-}
-
-.scrolled{
-    background-color: rgb(112, 87, 24);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
-}*/
-
-/* NAVBAR STYLING*/
-.navContainer{
+.headerContent{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
-    color: #000;
+    align-items: center;
+    padding: 10px 30px;
+    position: relative;
 }
 
 .logoName{
@@ -55,39 +74,12 @@ header{
     color: darkgoldenrod;
 }
 
-.basicContact{
-    display: flex;
-    gap: 50px;
-}
-
-.callNumber, .emailInfo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1em;
-}
-.call, .email{
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    align-items: center;
-    padding: 2px;
-    background-color: darkgoldenrod;
-}
-
-.same{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.navItems{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
+.hamburger{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 35px;
+    display: none;
 }
 
 .mainList{
@@ -153,7 +145,7 @@ header{
 }
 
 main{
-    margin-top: 150px;
+    margin-top: 90px;
     width: 100%;
 }
 
@@ -214,19 +206,8 @@ main{
     color: #454444;
 }
 
-.btnDiscover{
-    cursor: pointer;
-    background-color: darkgoldenrod;
-    border: none;
-    border-radius: 4px;
-    color: #000;
-    font-size: 1em;
-    padding: 8px 15px;
-    border: 1px solid darkgoldenrod;
-    transition: all 0.5s ease-in-out;
-}
-
 .img1{
+    width: 90%;
     padding-bottom: 10px;
 }
 
@@ -443,4 +424,58 @@ main{
     color: #adadad;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media (max-width: 768px){
+    .headerContent, #firstSection, .basics{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }.logoName, #navBar .mainList .lists .listLink{
+        text-align: center;
+    }
+    .whatWeOffer{
+        display: block;
+        width: 100%;
+    }
+    .overLay, .overLay1{
+        left: 20px;
+    }
+    .noteOffer{
+        margin-right: 30px;
+    }
+     .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mainDiv{
+        display: block;
+        width: 100%;
+    }
+
+    .childDivs{
+        margin-bottom: 20px;
+    }
+
+    .mainFooter{
+        display: block;
+        width: 100%;
+    }
+    .footerOne, .footerTwo{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .moreInfo2{
+        display: block;
+        width: 100%;
+    }
+}
+
+@media(max-width:540px){
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }

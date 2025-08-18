@@ -9,35 +9,54 @@
 
 body{
     font-family: 'Roboto', 'monospaced', 'lucida calligraphy';
+    min-height: 100vh;
+}
+
+.basicContact{
+    position: fixed;
+    width: 100%;
+    background-color: darkgoldenrod;
+    color: #000;
+    min-height: 60px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.callNumber, .emailInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+}
+.call, .email{
+    color: #000;
+}
+
+.same{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* HEADER STYLING*/
 header{
     position: fixed;
+    top: 55px;
     width: 100%;
-    z-index: 100;
     background-color: #fff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 100px;
+    z-index: 1;
 }
 
-/*#navBar{
-    transition: background-color 0.5s ease-out;
-}
-
-.scrolled{
-    background-color: rgb(112, 87, 24);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
-}*/
-
-/* NAVBAR STYLING*/
-.navContainer{
+.headerContent{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
-    color: #000;
+    align-items: center;
+    padding: 10px 30px;
+    position: relative;
 }
 
 .logoName{
@@ -55,49 +74,22 @@ header{
     color: darkgoldenrod;
 }
 
-.basicContact{
-    display: flex;
-    gap: 50px;
-}
-
-.callNumber, .emailInfo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1em;
-}
-.call, .email{
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    align-items: center;
-    padding: 2px;
-    background-color: darkgoldenrod;
-}
-
-.same{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.navItems{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
+.hamburger{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 35px;
+    display: none;
 }
 
 .mainList{
     display: flex;
     list-style: none;
+    width: 100%;
 }
 
 .lists{
-    display: inline-flex;
+    height: 100%;
     padding: 10px;
 }
 
@@ -125,7 +117,7 @@ header{
     position: relative;
 }
 
-.mainList .listLink.active{
+.listLink.active{
     color: darkgoldenrod;
 }
 
@@ -147,7 +139,7 @@ main{
 
 /* SECTIONS IN MAIN PAGE STYLING*/
 #firstSection{
-    margin-top: 150px;
+    margin-top: 120px;
     padding-top: 60px;
     width: 100%;
     display: flex;
@@ -414,25 +406,31 @@ main{
 }
 
 .pictures{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-       animation: fadeIn both;
-    animation-timeline: view(50% 20%);
-    animation-range: entry;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
 }
-.picture{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+
+.picture img{
+    width: 90%;
     border-radius: 20px;
-    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease-in-out;
 }
 
-.picture:hover{
-    transform: scale(1.1);
+.picture{
+    position: relative;
+}
+
+.pOnText{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    right: 50px;
+    background-color: darkgoldenrod;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    color: #fff;
 }
 
 .btnGetStarted1{
@@ -530,4 +528,98 @@ main{
     color: #adadad;
     font-weight: bold;
     text-decoration: none;
+}
+
+
+
+@media (max-width: 768px){
+    .headerContent, #firstSection, .basics{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }.logoName, #navBar .mainList .lists .listLink{
+        text-align: center;
+    }
+    .introText{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        width: 80%;
+    }
+    .sectionPart .logo{
+        width: 80%;
+        margin-left: 60px;
+    }
+    .text1{
+        width: 80%;
+    }
+    .getToKnowImg{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .shortNote{
+        display: block;
+    }
+
+    .whyChooseUs{
+        display: block;
+        width: 100%;
+    }
+    .whyChooseImgs img{
+        margin: 10px;
+        width: 80%;
+    }
+
+    .whyChooseImgs h2{
+        margin-right: 20px;
+    }
+
+    .reasons{
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .reasons .alignWell .qualities{
+        font-size: 10px;
+    }
+
+    .pictures{
+        display: block;
+        width: 100%;
+    }
+
+    .mainFooter{
+        display: block;
+        width: 100%;
+    }
+    .footerOne, .footerTwo{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .moreInfo2{
+        display: block;
+        width: 100%;
+    }
+}
+
+@media(max-width:540px){
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .shortNote{
+        width: 70%;
+    }
+    .shortNote .text{
+        margin-bottom: 15px;
+    }
+     .pictures{
+        display: block;
+        width: 100%;
+    }
 }

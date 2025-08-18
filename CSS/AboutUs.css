@@ -9,35 +9,54 @@
 
 body{
     font-family: 'Roboto', 'monospaced', 'lucida calligraphy';
+    min-height: 100vh;
+}
+
+.basicContact{
+    position: fixed;
+    width: 100%;
+    background-color: darkgoldenrod;
+    color: #000;
+    min-height: 60px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.callNumber, .emailInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+}
+.call, .email{
+    color: #000;
+}
+
+.same{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* HEADER STYLING*/
 header{
     position: fixed;
+    top: 60px;
     width: 100%;
-    z-index: 100;
     background-color: #fff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 100px;
+    z-index: 1;
 }
 
-/*#navBar{
-    transition: background-color 0.5s ease-out;
-}
-
-.scrolled{
-    background-color: rgb(112, 87, 24);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
-}*/
-
-/* NAVBAR STYLING*/
-.navContainer{
+.headerContent{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
-    color: #000;
+    align-items: center;
+    padding: 19px 30px;
+    position: relative;
 }
 
 .logoName{
@@ -55,48 +74,22 @@ header{
     color: darkgoldenrod;
 }
 
-.basicContact{
-    display: flex;
-    gap: 50px;
-}
-
-.callNumber, .emailInfo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1em;
-}
-.call, .email{
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    align-items: center;
-    padding: 2px;
-    background-color: darkgoldenrod;
-}
-
-.same{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.navItems{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
+.hamburger{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 35px;
+    display: none;
 }
 
 .mainList{
     display: flex;
     list-style: none;
+    width: 100%;
 }
 
 .lists{
-    display: inline-flex;
+    height: 100%;
     padding: 10px;
 }
 
@@ -124,7 +117,7 @@ header{
     position: relative;
 }
 
-.mainList .listLink.active{
+.listLink.active{
     color: darkgoldenrod;
 }
 
@@ -139,110 +132,26 @@ header{
     padding-right: 50px;
 }
 
-.btnGetStarted{
-    cursor: pointer;
-    background-color: darkgoldenrod;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-right: 30px;
-    transition: all 0.5s ease-in-out;
-}
-
-.btnGetServices{
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 10px;
-    color: darkgoldenrod;
-    border: 1px solid darkgoldenrod;
-    padding: 10px 20px;
-    font-size: 14px;
-    margin-top: 20px;
-    transition: all 0.5s ease-in-out;
-}
-
-.btnGetStarted:hover{
-    background-color: #fff;
-    border-radius: 10px;
-    color: darkgoldenrod;
-    border: 1px solid darkgoldenrod;
-}
-
-.btnGetServices:hover{
-    background-color: darkgoldenrod;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
-}
-
 main{
-    margin-top: 150px;
+    margin-top: 100px;
     width: 100%;
-}
-.backGround{
-    position: relative;
-    width: 100%;
-    height:700px; 
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.overLay{
-    position: absolute;
-    top: 400px;
-    color: #fff;
-    left: 60px;
-    font-size: 3em;
+#firstSection{
+    background-image: url('../Images/ContactPageImg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
 }
 
 .overLay1{
     position: absolute;
-    top: 460px;
+    top: 360px;
     color: #fff;
-     left: 60px;
+    left: 60px;
 }
 
-.button{
-    position: absolute;
-    top: 500px;
-    left: 170px;
-    display: flex;
-    align-items: center;
-}
-
-.btnHome{
-    cursor: pointer;
-    font-size: 1.5em;
-    margin: 30px;
-    border: none;
-    background-color: transparent;
-    color: #fff;
-}
-
-.fa-arrow-right{
-    color: #fff;
-    font-size: 1.9em;
-    margin-right: 20px;
-}
-
-.btnContact{
-    cursor: pointer;
-    background-color: darkgoldenrod;
-    border: none;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 1.5em;
-    padding: 10px 20px;
-    border: 1px solid darkgoldenrod;
-    transition: all 0.5s ease-in-out;
-}
-
-.btnContact:hover{
-    background-color: transparent;
-    color: #fff;
-}
 
 /* MAIN STYLING */
 main{
@@ -263,18 +172,22 @@ main{
 
 .securityPicture{
     width: 50%;
+    margin: 20PX;
+}
+
+.imageSecurity img{
+    width: 100%;
 }
 
 .imageSecurity{
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 30px;
+    border-radius: 20px;
     position: relative;
 }
 
 .sP1{
     position: absolute;
     top: 0;
-    right: 120px;
+    right: 30px;
     background-color: #fff;
     font-weight: bold;
     padding: 15px 10px;
@@ -362,26 +275,31 @@ main{
 }
 
 .pictures{
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   gap: 25px;
-}
-.picture{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 20px;
-    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease-in-out;
-    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
 }
 
 .picture img{
+    width: 90%;
     border-radius: 20px;
 }
 
-.picture:hover{
-    transform: scale(1.1);
+.picture{
+    position: relative;
+}
+
+.pOnText{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    right: 50px;
+    background-color: darkgoldenrod;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    color: #fff;
 }
 
 /* FOOTER STYLING */
@@ -479,4 +397,67 @@ main{
 
 .callNumber, .emailInfo{
     margin-bottom: 15px;
+}
+
+@media (max-width: 768px){
+    .headerContent, #firstSection, .basics{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }.logoName, #navBar .mainList .lists .listLink{
+        text-align: center;
+    }
+    #firstSection{
+        margin-top: 92px;
+        width: 100%;
+        height: 1000px;
+    }
+
+    .overLay1{
+        position: absolute;
+        top: 360px;
+        color: #fff;
+        left: 60px;
+    }
+
+    .securityPicture{
+        width: 100%;
+    }
+
+    .imageSecurity img{
+        width: 100%;
+    }
+
+    .mainSubject{
+        display: block;
+        width: 100%;
+    }
+
+    .box{
+        display: block;
+        width: 100%;
+    }
+
+    .box2{
+        margin-bottom: 10px;
+    }
+
+    .pictures{
+        display: block;
+        width: 100%;
+    }
+
+    .mainFooter{
+        display: block;
+        width: 100%;
+    }
+    .footerOne, .footerTwo{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .moreInfo2{
+        display: block;
+        width: 100%;
+    }
 }
